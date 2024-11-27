@@ -309,6 +309,7 @@
 
 .thrid-section {
   padding-block-start: 20px;
+
   @media (min-width: 768px) { 
   grid-column: 8/33;
   }
@@ -443,11 +444,8 @@
   background: var(--bg-color);
   color: var(--title);
   block-size: 100%;
-  padding: 0 var(--interval-s) 0 var(--interval-s);
-
   @media (min-width: 768px) {
     block-size: 64rem;
-    padding: 0 var(--interval-m) 0 var(--interval-m)
   }
 
   @media (min-width: 1024px) {
