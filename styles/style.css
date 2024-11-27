@@ -218,11 +218,11 @@
   display: grid;
   grid-template-columns: 1fr;
   font-size: 18px;
-  padding: 0 var(--interval-s) var(--interval-m) var(--interval-s);
+  padding: 0 var(--interval-s) var(--interval-s) var(--interval-s);
   background: var(--bg-color);
 
   @media (min-width: 768px) {
-    padding: 0 1.25rem 0 1.25rem;
+    padding: 0 var(--interval-m) 0 var(--interval-m);
   }
 }
 
@@ -369,6 +369,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-block-start: 50px;
+  margin-block-end: 10px;
 
   @media (min-width: 768px) {
     margin-block-start: 80px;
