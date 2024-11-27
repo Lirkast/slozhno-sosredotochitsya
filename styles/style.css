@@ -14,6 +14,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  z-index: -1;
 }
 
 .header {
@@ -30,6 +31,7 @@
 
   @media (min-width: 1024px) {
     min-block-size: 48rem; 
+    z-index: 1;
   }
 }
 
@@ -456,6 +458,7 @@
   color: var(--title);
   height: 100vh;
   min-block-size: 41.75rem;
+  z-index: 1;
 
   @media (min-width: 768px) {
     min-block-size: 64rem;
