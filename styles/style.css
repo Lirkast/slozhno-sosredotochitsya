@@ -228,7 +228,7 @@
   grid-template-columns: 1fr;
   font-size: 18px;
   padding: 3px var(--interval-s) var(--interval-s) var(--interval-s);
-  background: transparent;
+  background-color: transparent;
 
   @media (min-width: 768px) {
     padding: 3px var(--interval-m) 0 var(--interval-m);
@@ -452,7 +452,7 @@
 }
 
 .footer {
-  background: transparent;
+  background-color: transparent;
   color: var(--title);
   height: 100vh;
   min-block-size: 41.75rem;
