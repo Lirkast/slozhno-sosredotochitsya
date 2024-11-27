@@ -1,6 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   display: grid;
@@ -33,11 +32,49 @@
   }
 }
 
-
 .decorated-zone {
   position: relative;
 }
 
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--menu-color);
+  border-right: 1px solid var(--menu-color);
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  margin-inline-end: 10px;
+  margin-block-start: 10px;
+  color: var(--menu-color);
+}
+
+@media (min-width: 768px) {
+  .decorated-zone::before {
+    margin-top: 20px;
+    right: 10px;
+  }
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--menu-color);
+  border-left: 1px solid var(--menu-color);
+  inset-block-end: 0;
+  margin-inline-start: 10px;
+  margin-block-end: 10px;
+}
+
+@media (min-width: 768px) {
+  .decorated-zone::after {
+    margin-bottom: 20px;
+    left: 10px;
+  }
+}
 
 .header__rec {
   display: flex;
@@ -204,7 +241,6 @@
   }
 }
 
-
 .link:focus-visible {
   outline: 1px solid var(--menu-color);
 }
@@ -235,46 +271,6 @@
   }
 }
 
-.decorated-zone::before {
-  content: "";
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-  border-top: 1px solid var(--menu-color);
-  border-right: 1px solid var(--menu-color);
-  inset-inline-end: 0;
-  inset-block-start: 0;
-  margin-inline-end: 10px;
-  margin-block-start: 10px;
-  color: var(--menu-color);
-}
-
-@media (min-width: 768px) {
-  .decorated-zone::before {
-    margin-top: 20px;
-    right: 10px;
-  }
-}
-
-.decorated-zone::after {
-  content: "";
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-  border-bottom: 1px solid var(--menu-color);
-  border-left: 1px solid var(--menu-color);
-  inset-block-end: 0;
-  margin-inline-start: 10px;
-  margin-block-end: 10px;
-}
-
-@media (min-width: 768px) {
-  .decorated-zone::after {
-    margin-bottom: 20px;
-    left: 10px;
-  }
-}
-
 .section-title-one {
   @media (min-width: 768px) {
     grid-column: 1/6;
@@ -283,7 +279,7 @@
 
   @media (min-width: 1024px) {
   grid-column: 1/9;
-  padding-inline-end: 0;
+  padding-inline-end: 5px;
   }
 }
 
@@ -337,7 +333,6 @@
   }
 }
 
-
 .article__title {
   font-size: inherit;
   font-weight: var(--weight-m);
@@ -356,7 +351,7 @@
   text-wrap: wrap;
 }
 
-.article-title-none-interval {
+.top-none-interval {
   @media (min-width: 768px) {
     margin-block-start: 0;
   }
@@ -368,19 +363,20 @@
   line-height: 23.4px;
 }
 
-.article__text:last-child + {
-  padding-block-end: 0;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--interval-s);
   margin-block-start: 50px;
 
   @media (min-width: 768px) {
     margin-block-start: 80px;
     gap: 0;
+  }
+}
+
+.gallery_heading {
+  @media (min-width: 768px) {
+    display: flex;
   }
 }
 
@@ -402,7 +398,6 @@
     padding-block-end: 0;
   }
 }
-
 
 .gallery__card {
   padding: 10px 0;
@@ -442,14 +437,6 @@
   }
 }
 
-
-.gallery_heading {
-  @media (min-width: 768px) {
-    display: flex;
-  }
-}
-
-
 .footer {
   background: var(--bg-color);
   color: var(--title);
@@ -471,6 +458,7 @@
   justify-content: center;
   align-items: center;
   block-size: 100%;
+  block-size: 40.75rem;
 
   @media (min-width: 768px) {
     padding-block-start: 30px;
