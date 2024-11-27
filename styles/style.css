@@ -218,11 +218,11 @@
   display: grid;
   grid-template-columns: 1fr;
   font-size: 18px;
-  padding: 4px var(--interval-s) var(--interval-s) var(--interval-s);
+  padding: 3px var(--interval-s) var(--interval-s) var(--interval-s);
   background: var(--bg-color);
 
   @media (min-width: 768px) {
-    padding: 4px var(--interval-m) 0 var(--interval-m);
+    padding: 3px var(--interval-m) 0 var(--interval-m);
   }
 }
 
